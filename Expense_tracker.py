@@ -33,8 +33,22 @@ while True:
                 print("===Expenses List===")
                 count=1
                 for eachexpense in expenses:
-                   print(f"Expense number: {count} -> Date: {eachexpense["date"]}, Category: {eachexpense["category"]}, Description: {eachexpense["description"]}, Amount: {eachexpense["amount"]}")
+                   print(f"Expense number: {count} -> {eachexpense["date"]}, Category: {eachexpense["category"]} -> {eachexpense["description"]}, Amount: {eachexpense["amount"]}")
                    count=count+1
 
-      
+        #3. View Total Expenses
+    elif(choice==3):
+         total = 0
+         for eachexpense in expenses:
+                 total += eachexpense["amount"]
+         print("\nTotal Expenses:  ",total)
+         print("\n")
+ 
+        #4. EXIT
+    elif(choice==4):
+        print("Thank you for using the Expense Tracker App. Goodbye! ")
+        break
+    else:
+        print("Invalid choice. PLease try again !\n")
+
          
