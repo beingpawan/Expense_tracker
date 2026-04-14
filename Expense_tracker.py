@@ -25,4 +25,16 @@ while True:
         expenses.append(expense)
         print("Expense added successfully !\n")
 
-        
+        #2. View Expenses
+    elif(choice==2):
+        if(len(expenses)==0):
+            print("No expenses to show !\n")
+        else:
+                print("===Expenses List===")
+                count=1
+                for eachexpense in expenses:
+                   print(f"Expense number: {count} -> Date: {eachexpense["date"]}, Category: {eachexpense["category"]}, Description: {eachexpense["description"]}, Amount: {eachexpense["amount"]}")
+                   count=count+1
+
+      
+         
